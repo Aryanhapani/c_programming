@@ -1,10 +1,12 @@
 #include<stdio.h>
 int main(){
-    int n=2345;
+    int n;
+    printf("Enter number:-");
+    scanf("%d",&n);
     int count=0;
     while (n > 0)
     {
-        int lastdigti=n%10;
+        
         count++;
         n=n/10;
     }
