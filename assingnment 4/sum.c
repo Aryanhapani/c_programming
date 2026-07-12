@@ -1,13 +1,5 @@
 #include<stdio.h>
-
-int main(){
-    int n=9875;
-
-    
-    while (n >= 10)
-    {
-        int sum=0;
-        
+int sumdo(int n,int sum){
     
     
     while (n != 0)
@@ -17,7 +9,21 @@ int main(){
       n=n/10;
 
       }
-       n=sum;
+
+      return sum;
+}
+
+int main(){
+    int n=9875;
+
+    
+    while (n >= 10)
+    {
+        int sum=0;
+        
+       int ans=sumdo(n,sum);
+    
+       n=ans;
 }
     
     printf("%d",n);
