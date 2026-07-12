@@ -2,32 +2,25 @@
 
 int main(){
     int n=45963899;
-    int n2=n;
     int max=n%10;
-    int sec=-1;
+    int sec=n%10;
 
     while (n > 0)
     {
         int ld=n%10;
         if(max < ld){
+            sec=max;
             max=ld;
+        }else if(max != ld && (sec==max||sec < ld)){
+            sec=ld;
         }
         n=n/10;
     }
 
-    printf("%d",max);
+    printf("your second largest element:-%d",sec);
 
 
-    while (n2 > 0)
-    {
-        int ld=n2%10;
-        if(max != ld && sec < ld){
-            sec=ld;
-        }
-        n2=n2/10;
-    }
-    printf("%d",sec);
-
+    
     
 
     return 0;
