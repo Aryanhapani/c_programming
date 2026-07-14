@@ -1,39 +1,34 @@
-#include<stdio.h>
 
-int fre(int n,int num){
-     
+
+#include <stdio.h>
+
+int check(int n,int n2){
     int count=0;
-    while (n > 0)
-    {
-        int ld=n%10;
-
-        if(num==ld){
-            count++;
-            
-          }
-          n=n/10;
-        
+    while(n > 0){
+    int ld=n%10;
+    if(ld==n2){
+        count++;
     }
-    return count;
+    n=n/10;
+    
+}
+  return count;
 }
 
-int main(){
-    int n=882398;
-    
-   for(int i=0;i<=9;i++){
-    int ans=fre(n,i);
+int main()
+{
+   int n=882398;
+   int n2=n;
+   
+   while(n2> 0){
+       int ld=n2%10;
+       
+       int s=check(n,ld);
+        printf("%d:-12 %d:-\n",ld,s);
 
-    if(ans >0){
-        printf("%d -> %d\n",i,ans);
-    }
-
+       n2=n2/10;
    }
-    
+   
+   
     return 0;
 }
-
-
-
-
-    
-

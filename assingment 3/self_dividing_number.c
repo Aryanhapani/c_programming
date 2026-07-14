@@ -23,7 +23,7 @@ int main(){
      printf("Enter left:-");
      scanf("%d",&left);
      
-     printf("Enter left:-");
+     printf("Enter right:-");
      scanf("%d",&right);
     for(int i=left;i<=right;i++){
         checkself(i);

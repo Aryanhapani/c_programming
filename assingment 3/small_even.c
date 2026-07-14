@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int n=5;
+    int n=520;
 
     if(n%2==0){
         printf("%d",n);

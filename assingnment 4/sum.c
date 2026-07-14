@@ -1,31 +1,25 @@
-#include<stdio.h>
-int sumdo(int n,int sum){
-    
-    
-    while (n != 0)
-     {
-      int ld=n%10;
-      sum=sum+ld;
-      n=n/10;
 
-      }
 
-      return sum;
+#include <stdio.h>
+int sumofdigit(int n){
+    int sum=0;
+    while(n >0 ){
+        int ld=n%10;
+        sum=sum+ld;
+        n=n/10;
+    }
+    return sum;
 }
 
-int main(){
+int main()
+{
     int n=9875;
-
+    int sum=sumofdigit(n);
+    // printf("%d",sum);
+    while(sum > 9){
+        sum=sumofdigit(sum);
+    }
     
-    while (n >= 10)
-    {
-        int sum=0;
-        
-       int ans=sumdo(n,sum);
-    
-       n=ans;
-}
-    
-    printf("%d",n);
+    printf("%d",sum);
     return 0;
 }

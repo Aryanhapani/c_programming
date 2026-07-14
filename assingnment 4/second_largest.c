@@ -2,8 +2,8 @@
 
 int main(){
     int n=45963899;
-    int max=n%10;
-    int sec=n%10;
+    int max=-1;
+    int sec=-1;
 
     while (n > 0)
     {
@@ -11,7 +11,7 @@ int main(){
         if(max < ld){
             sec=max;
             max=ld;
-        }else if(max != ld && (sec==max||sec < ld)){
+        }else if(max != ld && sec<ld){
             sec=ld;
         }
         n=n/10;
