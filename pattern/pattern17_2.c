@@ -22,8 +22,8 @@ int main()
        }
        
        printf("\n");
-       
-        if(i<n){
+
+        if(i < n){
            space=space+1;
        }else{
            space=space-1;
